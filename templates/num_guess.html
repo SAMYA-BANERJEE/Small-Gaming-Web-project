@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Guess the Number</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='num_game.css') }}">
+</head>
+<body>
+    <video autoplay muted loop id="bg-video">
+        <source src="{{ url_for('static', filename='home_page_video.mp4') }}" type="video/mp4">
+        Your browser does not support HTML5 video.
+    </video>
+
+    <div class="content">
+        <h1>Make your guess!</h1>
+        <form method="post">
+          <h2>Your guess:</h2><input type="text" name="user_guess" required>
+            <input type="submit" value="Guess">
+        </form>
+        {% if message %}
+            <h3>{{ message }}</h3>
+        {% endif %}
+    </div>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Game</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='quiz_game.css') }}">
+</head>
+<body>
+    <div class="video-container">
+        <video autoplay muted loop id="bg-video">
+            <source src="{{ url_for('static', filename='home_page_video.mp4') }}" type="video/mp4">
+            Your browser does not support HTML5 video.
+        </video>
+    </div>
+    <div class="quiz-container">
+        <h1>Welcome to the Quiz Game!</h1>
+        <form action="{{ url_for('quiz_game') }}" method="post" class="quiz-form">
+            <p>Question 1: what does CPU stand for? <input type="text" name="what does CPU stand for?"></p>
+            <p>Question 2: what does GPU stand for? <input type="text" name="what does GPU stand for?"></p>
+            <p>Question 3: what does BST stand for? <input type="text" name="what does BST stand for?"></p>
+            <p>Question 4: what does BT stand for? <input type="text" name="what does BT stand for?"></p>
+            <button type="submit" class="quiz-submit" value="Submit">Submit</button>
+        </form>
+    </div>
+</body>
+</html>

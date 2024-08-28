@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Quiz Result</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='quiz_game.css') }}">
+</head>
+<body>
+    <div class="video-container">
+        <video autoplay muted loop id="bg-video">
+            <source src="{{ url_for('static', filename='home_page_video.mp4') }}" type="video/mp4">
+            Your browser does not support HTML5 video.
+        </video>
+    </div>
+    <div class="container">
+        <h1>Quiz Result</h1>
+        <p>You scored {{ score }} out of {{ total }}</p>
+        <p><a id="img-link" href="/games"><img src="static\Game Over.png" style="width:25vw;height:25vh;"></a></p>
+    </div>
+</body>
+</html>

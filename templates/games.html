@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Games_page demo</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='games_page.css') }}">
+  </head>
+  <body>
+        <video autoplay muted loop id="bg-video">
+          <source src="{{ url_for('static', filename='home_page_video.mp4') }}" type="video/mp4">
+          Your browser does not support HTML5 video.
+        </video>
+          
+        <div class="content">
+
+                    <form action="/games" method="POST">
+                      <a href="/rock_paper_sessores_game"><button class="btn btn-primary" type="button" name="rock_paper_sessores_game"> rock_paper_sessores_game</button></a>
+                      <a href="/num_game"><button class="btn btn-primary" type="button" name="number_gussing_game">number_gussing_game</button></a>
+                      <a href="/quiz_game"><button class="btn btn-primary" type="button" name="quiz_game">quiz_game</button></a>
+                  
+                      <div class="exit">
+                        <a href="/login"><button type="button" class="btn btn-outline-danger" name="exit_button">Exit</button></a>
+                      </div>
+                   </form> 
+          </div>
+            
+  </body>
+</html>

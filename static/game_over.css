@@ -1,0 +1,44 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden; /* Optional: Remove scrollbars */
+}
+
+#bg-video {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: 100vh;
+    z-index: -100;
+    object-fit: cover;
+
+}
+
+.content {
+    position: relative;
+    z-index: 10;
+    padding: 20px;
+    text-align: center; /* Center the content */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Center positioning */
+    width: 90%; /* Adjust based on preference */
+    max-width: 600px; /* Adjust based on preference */
+}
+
+h1{
+    color:aliceblue;
+}
+h2{
+    color:aqua;
+}
+h3{  
+    color:#007BFF;
+}
+#img-link {
+    text-decoration: none;
+}
